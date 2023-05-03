@@ -1,6 +1,7 @@
 import React ,{useState}from 'react'
 import {AppBar ,Typography,Toolbar, Tabs, Tab} from '@mui/material';
 import LibraryBooksOutlinedIcon from '@mui/icons-material/LibraryBooksOutlined';
+import {NavLink} from 'react-router-dom';
 const Header = () => {
     const [value ,setValue] = useState();
   return (
@@ -16,17 +17,9 @@ const Header = () => {
                 textColor='inherit'
                  value={value} 
                  onChange={(e,val) => setValue(val)} >
-                    <Tab label="Personal 1"/>
-                    <Tab label="Personal 2"/>
-                    <Tab label="notes"/>
-                    <Tab label="Work Exp"/>
-                    <Tab label="Project"/>
-                    <Tab label="Education"/>
-                    <Tab label="Add Skill"/>
-                    <Tab label="Achievement"/>
-                    <Tab label="Interest"/>
-                    <Tab label="Language"/>
-                    <Tab label="Generate Resume"/>
+                    <Tab LinkComponent = {NavLink} to="/Add" label="Add Details"/>
+                    <Tab LinkComponent = {NavLink} to="/resume" label="Resume"/>
+                    <Tab LinkComponent = {NavLink} to="/about" label="About Us"/>
                 </Tabs>
             </Toolbar>
         </AppBar>

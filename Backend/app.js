@@ -2,8 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 console.log("Hello Ravi Prasad !!!!!");
-const router = require("./routes/resume-routes")
-app.use(express.json())
+const router = require("./routes/resume-routes");
+const cors = require('cors');
+app.use(express.json());
+app.use(cors());
 app.use("/resumes", router);
 
 
