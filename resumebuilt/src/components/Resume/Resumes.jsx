@@ -12,7 +12,7 @@ const Resumes = () => {
     useEffect(() => {
         fetchHandler().then((data) => setResumes(data.resumes));
     },[]);
-    console.log(resumes);
+    //console.log(resumes);
     return (
     <div>
         <ul>

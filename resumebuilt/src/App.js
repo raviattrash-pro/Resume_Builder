@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import AddResume from "./components/AddResume"
 import Myresume from "./components/Resume/Resumes"
 import About from "./components/Resume/About"
+import ResumeDetail from "./components/ResumeDetail"
 
 function App() {
     return ( < React.Fragment >
@@ -35,6 +36,12 @@ function App() {
         <
         Route path = "/about"
         element = { < About / > }
+        exact / >
+
+
+        <
+        Route path = "/resume/:id"
+        element = { < ResumeDetail / > }
         exact / >
 
         <

@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button} from "@mui/material"
+import {Link,LinkComponent} from 'react-router-dom'
 const Resume = (props) => {
     const { _id,name,designation,email,phoneNumber,address,socialMedia,skills,yournotes,
     projects,
@@ -31,7 +32,7 @@ const Resume = (props) => {
         <h3>10th Marks :{ssc_mark}</h3>
         <h3>12 th marks :{hssc_mark}</h3>
        <h3>B.tech cgpa :{btech_mark}</h3>
-        <Button sx={{mt:"auto"}}>UPDATE</Button>
+        <Button LinkComponent = {Link} to ={`/resume/${_id}`} sx={{mt:"auto"}}>UPDATE</Button>
         <Button  sx={{mt:"auto"}} >DELETE</Button>
         
     </div>
